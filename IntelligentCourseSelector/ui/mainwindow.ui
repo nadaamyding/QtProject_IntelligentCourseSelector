@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1225</width>
+    <height>1100</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>102</y>
+      <width>1141</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="3">
+     <item>
+      <widget class="QWidget" name="leftPane" native="true">
+       <widget class="QWidget" name="rightPane" native="true">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>8</y>
+          <width>811</width>
+          <height>791</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QGroupBox" name="gb_settings">
+           <property name="styleSheet">
+            <string notr="true">border:1px solid #ccc; border-radius:4px; margin-top:8px;
+QGroupBox::title { subcontrol-origin: margin; left:10px; padding:0 3px; }
+</string>
+           </property>
+           <property name="title">
+            <string>GroupBox</string>
+           </property>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>480</y>
+              <width>271</width>
+              <height>131</height>
+             </rect>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>学分上限</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QSpinBox" name="sb_creditLimit">
+               <property name="maximum">
+                <number>400</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>选修优先级：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSlider" name="sld_priority">
+               <property name="maximum">
+                <number>5</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>禁排时间：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QPushButton" name="btn_blockTime">
+               <property name="text">
+                <string>添加</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>660</y>
+              <width>701</width>
+              <height>70</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>198</width>
+                 <height>68</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_import">
+               <property name="text">
+                <string>导入课程</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_export">
+               <property name="text">
+                <string>导出方案</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QTabWidget" name="tabs_schedule">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>10</y>
+          <width>861</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>第1学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem1">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>第2学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>第3学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_4">
+         <attribute name="title">
+          <string>第4学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_5">
+         <attribute name="title">
+          <string>第5学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_6">
+         <attribute name="title">
+          <string>第6学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_7">
+         <attribute name="title">
+          <string>第7学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tab_8">
+         <attribute name="title">
+          <string>第8学期</string>
+         </attribute>
+         <widget class="QTableWidget" name="table_sem8">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>851</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">gridline-color:#eee; alternate-background-color:#f9f9f9;
+QHeaderView::section { background:#f0f0f0; padding:4px; border:1px solid #ddd; }
+</string>
+          </property>
+          <property name="rowCount">
+           <number>27</number>
+          </property>
+          <property name="columnCount">
+           <number>8</number>
+          </property>
+          <row>
+           <property name="text">
+            <string>第1节 08:00–08:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第2节 08:50–09:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第3节 09:40–10:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第4节 10:30–11:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第5节 11:20–12:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第6节 12:10–12:55</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第7节 13:00–13:45</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第8节 13:50–14:35</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第9节 14:40–15:25</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第10节 15:30–16:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第11节 18:30–19:15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第12节 19:20–20:05</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>第13节 20:10–20:55</string>
+           </property>
+          </row>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>周一</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周二</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周三</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周四</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周五</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周六</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>周日</string>
+           </property>
+          </column>
+          <column/>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>271</width>
+          <height>791</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLineEdit" name="le_search">
+           <property name="styleSheet">
+            <string notr="true">border:1px solid #ccc; border-radius:4px; padding:4px; background:#fff;
+</string>
+           </property>
+           <property name="placeholderText">
+            <string>🔍 搜索课程</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTreeWidget" name="tree_courses">
+           <property name="styleSheet">
+            <string notr="true">background:#fafafa; border:1px solid #ddd; border-radius:4px;
+QTreeWidget::item:selected { background:#87CEFA; color:#333; }
+</string>
+           </property>
+           <attribute name="headerVisible">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="headerHighlightSections">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>课程名称</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1225</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
